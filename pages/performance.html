@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performance Analytics | EduPredict AI</title>
+    <link rel="stylesheet" href="../css/performance.css">
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="brand">
+            <div class="brand-logo">🎓</div>
+            <div>
+                <h2>EduPredict AI</h2>
+                <p>STUDENT INTELLIGENCE</p>
+            </div>
+        </div>
+
+        <nav class="sidebar-menu">
+
+            <a href="dashboard.html" class="nav-item">
+                <span class="nav-icon">⌂</span>
+                <div>
+                    <strong>Dashboard</strong>
+                    <small>Overview</small>
+                </div>
+            </a>
+
+            <a href="performance.html" class="nav-item active">
+                <span class="nav-icon">◇</span>
+                <div>
+                    <strong>Performance</strong>
+                    <small>Academic insights</small>
+                </div>
+            </a>
+
+            <a href="predictions.html" class="nav-item">
+                <span class="nav-icon">◎</span>
+                <div>
+                    <strong>Predictions</strong>
+                    <small>AI predictions</small>
+                </div>
+            </a>
+
+            <a href="learning.html" class="nav-item">
+                <span class="nav-icon">✦</span>
+                <div>
+                    <strong>Learning</strong>
+                    <small>Personalized plan</small>
+                </div>
+            </a>
+
+            <a href="reports.html" class="nav-item">
+                <span class="nav-icon">▣</span>
+                <div>
+                    <strong>Reports</strong>
+                    <small>Progress reports</small>
+                </div>
+            </a>
+
+            <a href="settings.html" class="nav-item">
+                <span class="nav-icon">⚙</span>
+                <div>
+                    <strong>Settings</strong>
+                    <small>Preferences</small>
+                </div>
+            </a>
+
+        </nav>
+
+        <div class="system-status">
+            <span class="online-dot"></span>
+            <div>
+                <strong>System Online</strong>
+                <small>Academic profile loaded</small>
+            </div>
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+        <header class="topbar">
+
+            <div class="search-box">
+                <span>⌕</span>
+                <input
+                    type="text"
+                    placeholder="Search subjects or insights..."
+                >
+                <kbd>Ctrl K</kbd>
+            </div>
+
+            <div class="top-right">
+
+                <div class="profile">
+
+                    <div class="profile-avatar" id="profileAvatar">
+                        S
+                    </div>
+
+                    <div>
+                        <strong id="profileName">Student</strong>
+                        <small>AI Learner</small>
+                    </div>
+
+                    <b>⌄</b>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- PAGE HEADING -->
+        <section class="page-heading">
+
+            <div class="heading-text">
+
+                <span class="eyebrow">
+                    ACADEMIC ANALYTICS
+                </span>
+
+                <h1>
+                    Performance
+                    <span>Analytics</span>
+                </h1>
+
+                <p>
+                    View your academic progress using the information
+                    provided in your Academic Setup.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- DYNAMIC STAT CARDS -->
+        <section class="stats-grid" id="statsGrid">
+        </section>
+
+
+        <!-- ANALYTICS -->
+        <section class="analytics-grid">
+
+            <!-- SUBJECT PERFORMANCE -->
+            <div class="subject-panel dark-panel">
+
+                <div class="panel-header">
+
+                    <div>
+                        <h2>📊 Subject-wise Performance</h2>
+                        <p>Your selected subjects and completion</p>
+                    </div>
+
+                    <span id="subjectCount"></span>
+
+                </div>
+
+                <div class="subject-table" id="subjectTable">
+
+                    <div class="empty-subjects">
+                        Complete your Academic Setup to view subjects.
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ACADEMIC OVERVIEW -->
+            <div class="overview-panel">
+
+                <div class="panel-header">
+                    <div>
+                        <h2>🟣 Academic Overview</h2>
+                        <p>Your saved academic profile</p>
+                    </div>
+                </div>
+
+                <div class="legend" id="profileOverview">
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- BOTTOM SECTION -->
+        <section class="bottom-grid">
+
+            <div class="bottom-card" id="yearCard">
+
+                <div class="bottom-icon trophy">🎓</div>
+
+                <div>
+                    <span>Academic Year</span>
+                    <h3 id="yearValue">—</h3>
+                    <p>Your selected year</p>
+                </div>
+
+            </div>
+
+
+            <div class="bottom-card" id="preparationCard">
+
+                <div class="bottom-icon people">📚</div>
+
+                <div>
+                    <span>Preparation Level</span>
+                    <h3 id="preparationValue">—</h3>
+                    <p>Your selected preparation level</p>
+                </div>
+
+            </div>
+
+
+            <div class="bottom-card" id="goalsCard">
+
+                <div class="bottom-icon target">🎯</div>
+
+                <div>
+                    <span>Selected Goals</span>
+                    <h3 id="goalsValue">—</h3>
+                    <p>Your academic goals</p>
+                </div>
+
+            </div>
+
+
+            <!-- PERSONALIZED INSIGHT -->
+            <div class="insight-panel">
+
+                <div class="insight-title">
+
+                    <div class="insight-icon">✦</div>
+
+                    <div>
+                        <h2>Academic Insights</h2>
+                        <span>Based on your saved profile</span>
+                    </div>
+
+                </div>
+
+                <div id="insightContent">
+                    <p>
+                        Complete your Academic Setup to receive
+                        subject-based suggestions.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="../js/performance.js"></script>
+
+</body>
+</html>

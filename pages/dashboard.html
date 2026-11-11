@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | EduPredict AI</title>
+
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+
+<body>
+
+<div class="dashboard-app">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="brand">
+
+            <div class="brand-icon">🎓</div>
+
+            <div>
+                <h2>EduPredict <span>AI</span></h2>
+                <p>Student Intelligence</p>
+            </div>
+
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <button class="nav-item active" data-page="dashboard">
+                <span>⌂</span>
+
+                <div>
+                    <strong>Dashboard</strong>
+                    <small>Overview</small>
+                </div>
+            </button>
+
+
+            <button class="nav-item" data-page="performance">
+                <span>◈</span>
+
+                <div>
+                    <strong>Performance</strong>
+                    <small>Academic insights</small>
+                </div>
+            </button>
+
+
+            <button class="nav-item" data-page="predictions">
+                <span>◉</span>
+
+                <div>
+                    <strong>Predictions</strong>
+                    <small>AI predictions</small>
+                </div>
+            </button>
+
+
+            <button class="nav-item" data-page="learning">
+                <span>✦</span>
+
+                <div>
+                    <strong>Learning</strong>
+                    <small>Personalized plan</small>
+                </div>
+            </button>
+
+
+            <button class="nav-item" data-page="reports">
+                <span>▣</span>
+
+                <div>
+                    <strong>Reports</strong>
+                    <small>Progress reports</small>
+                </div>
+            </button>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <button class="nav-item" data-page="settings">
+                <span>⚙</span>
+
+                <div>
+                    <strong>Settings</strong>
+                    <small>Preferences</small>
+                </div>
+            </button>
+
+
+            <div class="ai-status">
+
+                <div class="status-dot"></div>
+
+                <div>
+                    <strong>AI System</strong>
+                    <small>Ready to analyze</small>
+                </div>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="main-content">
+
+        <!-- TOP BAR -->
+
+        <header class="topbar">
+
+            <div>
+
+                <p class="eyebrow">
+                    STUDENT DASHBOARD
+                </p>
+
+                <h1>
+                    Welcome back,
+                    <span id="studentName">Student</span> 👋
+                </h1>
+
+                <p class="top-description">
+                    Here is your latest academic performance and AI-powered learning overview.
+                </p>
+
+            </div>
+
+
+            <div class="profile-area">
+
+                <div class="notification">
+                    🔔
+                </div>
+
+
+                <div class="profile">
+
+                    <div class="profile-avatar" id="profileAvatar">
+                        S
+                    </div>
+
+                    <div>
+                        <strong id="profileName">Student</strong>
+                        <small>AI Learner</small>
+                    </div>
+
+                    <span>⌄</span>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= QUICK STATS ================= -->
+
+        <section class="stats-grid">
+
+
+            <!-- OVERALL PERFORMANCE -->
+
+            <div class="stat-card blue">
+
+                <div class="stat-top">
+
+                    <span>Overall Performance</span>
+
+                    <div class="stat-icon">
+                        📊
+                    </div>
+
+                </div>
+
+
+                <h2 id="overallPerformance">--%</h2>
+
+
+                <div class="progress">
+
+                    <div
+                        id="overallProgress"
+                        style="width:0%">
+                    </div>
+
+                </div>
+
+
+                <p>
+
+                    <span
+                        class="positive"
+                        id="performanceTrend">
+                        —
+                    </span>
+
+                    current academic profile
+
+                </p>
+
+            </div>
+
+
+
+            <!-- AI PREDICTION -->
+
+            <div class="stat-card purple">
+
+                <div class="stat-top">
+
+                    <span>AI Prediction</span>
+
+                    <div class="stat-icon">
+                        🎯
+                    </div>
+
+                </div>
+
+
+                <h2 id="aiPrediction">--%</h2>
+
+
+                <div class="progress">
+
+                    <div
+                        id="aiPredictionProgress"
+                        style="width:0%">
+                    </div>
+
+                </div>
+
+
+                <p>
+
+                    <span
+                        class="positive"
+                        id="predictionConfidence">
+                        Analyzing
+                    </span>
+
+                    model prediction
+
+                </p>
+
+            </div>
+
+
+
+            <!-- LEARNING CONSISTENCY -->
+
+            <div class="stat-card green">
+
+                <div class="stat-top">
+
+                    <span>Learning Consistency</span>
+
+                    <div class="stat-icon">
+                        🌱
+                    </div>
+
+                </div>
+
+
+                <h2 id="learningConsistency">--%</h2>
+
+
+                <div class="progress">
+
+                    <div
+                        id="consistencyProgress"
+                        style="width:0%">
+                    </div>
+
+                </div>
+
+
+                <p>
+
+                    <span
+                        class="positive"
+                        id="consistencyLabel">
+                        —
+                    </span>
+
+                    based on study habits
+
+                </p>
+
+            </div>
+
+
+
+            <!-- STUDY HOURS -->
+
+            <div class="stat-card orange">
+
+                <div class="stat-top">
+
+                    <span>Study Hours</span>
+
+                    <div class="stat-icon">
+                        ⏱
+                    </div>
+
+                </div>
+
+
+                <h2 id="studyHours">--h</h2>
+
+
+                <div
+                    class="mini-bars"
+                    id="studyHourBars">
+
+                    <span style="height:30%"></span>
+                    <span style="height:45%"></span>
+                    <span style="height:55%"></span>
+                    <span style="height:65%"></span>
+                    <span style="height:75%"></span>
+                    <span style="height:85%"></span>
+                    <span style="height:95%"></span>
+
+                </div>
+
+
+                <p>
+                    Weekly study availability
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= MAIN GRID ================= -->
+
+        <section class="dashboard-grid">
+
+
+            <!-- PERFORMANCE CHART -->
+
+            <div class="panel performance-panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <span class="panel-label">
+                            PERFORMANCE
+                        </span>
+
+                        <h2>
+                            Academic Progress
+                        </h2>
+
+                        <p>
+                            Current subject completion profile
+                        </p>
+
+                    </div>
+
+
+                    <select id="periodSelect">
+
+                        <option>
+                            Current Profile
+                        </option>
+
+                        <option>
+                            Last 30 days
+                        </option>
+
+                        <option>
+                            This semester
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <div class="chart">
+
+                    <div class="y-axis">
+
+                        <span>100%</span>
+                        <span>80%</span>
+                        <span>60%</span>
+                        <span>40%</span>
+                        <span>20%</span>
+
+                    </div>
+
+
+                    <div class="chart-area">
+
+                        <div class="grid-line"></div>
+                        <div class="grid-line"></div>
+                        <div class="grid-line"></div>
+                        <div class="grid-line"></div>
+                        <div class="grid-line"></div>
+
+
+                        <!-- IMPORTANT:
+                             JS will generate bars here.
+                             No fake W1-W8 data. -->
+
+                        <div
+                            class="chart-bars"
+                            id="performanceChartBars">
+
+                            <div class="empty-chart">
+                                Select subjects to generate your academic profile.
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= AI INSIGHT ================= -->
+
+            <div class="panel ai-panel">
+
+                <div class="ai-glow"></div>
+
+
+                <div class="ai-header">
+
+                    <div class="ai-orb">
+                        ✦
+                    </div>
+
+                    <div>
+
+                        <span class="panel-label">
+                            AI INSIGHT
+                        </span>
+
+                        <h2>
+                            Smart Analysis
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <p
+                    class="ai-message"
+                    id="aiMessage">
+
+                    AI is analyzing your academic profile...
+
+                </p>
+
+
+
+                <!-- DYNAMIC AI SCORE -->
+
+                <div class="ai-score">
+
+                    <div>
+
+                        <span>
+                            Predicted Performance
+                        </span>
+
+                        <strong id="aiPredictedScore">
+                            --%
+                        </strong>
+
+                    </div>
+
+
+                    <div class="confidence">
+
+                        <span>
+                            Model Confidence
+                        </span>
+
+                        <strong id="aiConfidence">
+                            --%
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- AI RISK -->
+
+                <div
+                    class="ai-risk"
+                    id="aiRiskBox"
+                    style="
+                        margin-top:16px;
+                        padding:14px 16px;
+                        border-radius:14px;
+                        background:rgba(255,255,255,.08);
+                        display:flex;
+                        justify-content:space-between;
+                        align-items:center;
+                        gap:10px;
+                    ">
+
+                    <span>
+                        AI Risk Assessment
+                    </span>
+
+                    <strong id="aiRiskLevel">
+                        Analyzing...
+                    </strong>
+
+                </div>
+
+
+                <button
+                    class="ai-button"
+                    id="insightBtn">
+
+                    View AI Insights
+
+                    <span>→</span>
+
+                </button>
+
+            </div>
+
+
+
+            <!-- ================= SUBJECT PERFORMANCE ================= -->
+
+            <div class="panel subjects-panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <span class="panel-label">
+                            SUBJECTS
+                        </span>
+
+                        <h2>
+                            Subject Performance
+                        </h2>
+
+                    </div>
+
+
+                    <button
+                        class="text-button"
+                        id="viewSubjectDetails">
+
+                        View details →
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- JS WILL GENERATE SUBJECTS -->
+
+                <div
+                    class="subject-list"
+                    id="subjectList">
+
+                    <div class="empty-subjects">
+
+                        <span>📚</span>
+
+                        <p>
+                            Your selected subjects will appear here.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= RECOMMENDATIONS ================= -->
+
+            <div class="panel recommendation-panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <span class="panel-label">
+                            AI RECOMMENDATION
+                        </span>
+
+                        <h2>
+                            What to focus on
+                        </h2>
+
+                    </div>
+
+
+                    <div class="sparkle">
+                        ✦
+                    </div>
+
+                </div>
+
+
+                <!-- JS WILL GENERATE RECOMMENDATIONS -->
+
+                <div
+                    id="recommendationList"
+                    class="recommendation-list">
+
+                    <div class="recommendation">
+
+                        <div class="recommendation-icon">
+                            🤖
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Analyzing your profile
+                            </strong>
+
+                            <p>
+                                AI recommendations will be generated from your selected subjects and academic data.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= BOTTOM SECTION ================= -->
+
+        <section class="bottom-grid">
+
+
+            <div
+                class="quick-card"
+                data-page="predictions">
+
+                <div class="quick-icon purple-icon">
+                    🎯
+                </div>
+
+                <div>
+
+                    <strong>
+                        AI Prediction
+                    </strong>
+
+                    <p>
+                        See where your current performance is heading.
+                    </p>
+
+                </div>
+
+                <span>
+                    →
+                </span>
+
+            </div>
+
+
+
+            <div
+                class="quick-card"
+                data-page="learning">
+
+                <div class="quick-icon green-icon">
+                    🌱
+                </div>
+
+                <div>
+
+                    <strong>
+                        Learning Plan
+                    </strong>
+
+                    <p>
+                        Get a personalized plan based on your goals.
+                    </p>
+
+                </div>
+
+                <span>
+                    →
+                </span>
+
+            </div>
+
+
+
+            <div
+                class="quick-card"
+                data-page="performance">
+
+                <div class="quick-icon blue-icon">
+                    🤖
+                </div>
+
+                <div>
+
+                    <strong>
+                        Academic Analysis
+                    </strong>
+
+                    <p>
+                        Understand your strengths and improvement areas.
+                    </p>
+
+                </div>
+
+                <span>
+                    →
+                </span>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= FOOTER ================= -->
+
+        <footer>
+
+            <span>
+                EduPredict AI
+            </span>
+
+            <span>
+                AI-powered academic intelligence
+            </span>
+
+            <span>
+                Built for smarter learning
+            </span>
+
+        </footer>
+
+    </main>
+
+</div>
+
+
+
+<!-- ================= AI INSIGHT MODAL ================= -->
+
+<div
+    class="modal"
+    id="insightModal">
+
+    <div class="modal-content">
+
+        <button
+            class="close-modal"
+            id="closeModal">
+
+            ×
+
+        </button>
+
+
+        <div class="modal-icon">
+            ✦
+        </div>
+
+
+        <span class="panel-label">
+            EDUPREDICT AI
+        </span>
+
+
+        <h2>
+            Your AI Performance Insight
+        </h2>
+
+
+        <p id="modalInsightText">
+
+            AI is analyzing your current academic profile.
+
+        </p>
+
+
+        <div class="modal-stats">
+
+
+            <div>
+
+                <span>
+                    Current
+                </span>
+
+                <strong id="modalCurrent">
+                    --%
+                </strong>
+
+            </div>
+
+
+            <div>
+
+                <span>
+                    Predicted
+                </span>
+
+                <strong id="modalPredicted">
+                    --%
+                </strong>
+
+            </div>
+
+
+            <div>
+
+                <span>
+                    Growth
+                </span>
+
+                <strong id="modalGrowth">
+                    --%
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <button
+            class="ai-button"
+            id="closeInsight">
+
+            Continue Learning →
+
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<!-- ================= DASHBOARD JS ================= -->
+
+<script src="../js/dashboard.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning | EduPredict AI</title>
+    <link rel="stylesheet" href="../css/learning.css">
+</head>
+
+<body>
+<div class="app">
+
+    <aside class="sidebar">
+        <div class="brand">
+            <div class="brand-icon">🎓</div>
+            <div>
+                <h2>EduPredict AI</h2>
+                <span>STUDENT INTELLIGENCE</span>
+            </div>
+        </div>
+
+        <nav class="navigation">
+            <a href="dashboard.html" class="nav-item">
+                <span class="nav-icon">⌂</span>
+                <div><strong>Dashboard</strong><small>Overview</small></div>
+            </a>
+
+            <a href="performance.html" class="nav-item">
+                <span class="nav-icon">◇</span>
+                <div><strong>Performance</strong><small>Academic insights</small></div>
+            </a>
+
+            <a href="predictions.html" class="nav-item">
+                <span class="nav-icon">◎</span>
+                <div><strong>Predictions</strong><small>Performance prediction</small></div>
+            </a>
+
+            <a href="learning.html" class="nav-item active">
+                <span class="nav-icon">✦</span>
+                <div><strong>Learning</strong><small>Personalized plan</small></div>
+            </a>
+
+            <a href="reports.html" class="nav-item">
+                <span class="nav-icon">▣</span>
+                <div><strong>Reports</strong><small>Progress reports</small></div>
+            </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <a href="settings.html" class="nav-item">
+                <span class="nav-icon">⚙</span>
+                <div><strong>Settings</strong><small>Preferences</small></div>
+            </a>
+        </div>
+
+        <div class="system-status">
+            <span class="status-dot"></span>
+            <div>
+                <strong>Learning System</strong>
+                <small id="systemStatus">Loading profile...</small>
+            </div>
+        </div>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="top-header">
+            <div>
+                <p class="page-label">PERSONALIZED LEARNING</p>
+                <h1>Your Learning Plan <span>📚</span></h1>
+                <p class="subtitle">
+                    Your learning information based on your Academic Setup.
+                </p>
+            </div>
+
+            <div class="profile-box">
+                <div class="profile-avatar" id="profileAvatar">S</div>
+                <div class="profile-info">
+                    <strong id="profileName">Student</strong>
+                    <small>AI Learner</small>
+                </div>
+            </div>
+        </header>
+
+        <!-- DYNAMIC OVERVIEW -->
+        <section class="overview-grid" id="overviewGrid"></section>
+
+        <!-- MAIN CONTENT -->
+        <section class="content-grid">
+
+            <div class="panel study-plan">
+                <div class="panel-header">
+                    <div>
+                        <span class="section-label">YOUR SUBJECTS</span>
+                        <h2>Personalized Learning Plan</h2>
+                        <p>Subjects selected in your Academic Setup.</p>
+                    </div>
+                </div>
+
+                <div class="plan-list" id="planList"></div>
+            </div>
+
+            <div class="panel schedule-panel">
+                <div class="panel-header">
+                    <div>
+                        <span class="section-label">STUDY SCHEDULE</span>
+                        <h2>Study Schedule</h2>
+                    </div>
+                </div>
+
+                <div class="schedule-list" id="scheduleList">
+                    <p>No study schedule has been added yet.</p>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- BOTTOM SECTION -->
+        <section class="bottom-grid">
+
+            <div class="panel">
+                <div class="panel-header">
+                    <div>
+                        <span class="section-label">FOCUS AREAS</span>
+                        <h2>Subjects to Improve</h2>
+                    </div>
+                </div>
+
+                <div id="focusSubjects"></div>
+            </div>
+
+            <div class="panel weekly-goal">
+                <div class="goal-icon">🎯</div>
+
+                <div class="goal-content">
+                    <span class="section-label">ACADEMIC GOALS</span>
+                    <h2>Your Selected Goals</h2>
+                    <div id="academicGoals"></div>
+                </div>
+            </div>
+
+        </section>
+
+        <footer>
+            EduPredict AI • Personalized Learning System
+        </footer>
+
+    </main>
+</div>
+
+<script src="../js/learning.js"></script>
+</body>
+</html>

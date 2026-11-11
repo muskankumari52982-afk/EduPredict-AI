@@ -1,0 +1,286 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Reports | EduPredict AI</title>
+    <link rel="stylesheet" href="../css/reports.css">
+</head>
+<body>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="brand">
+            <div class="brand-icon">🎓</div>
+            <div class="brand-text">
+                <h2>EduPredict AI</h2>
+                <span>STUDENT INTELLIGENCE</span>
+            </div>
+        </div>
+
+        <!-- MAIN NAVIGATION -->
+        <nav class="sidebar-nav">
+
+            <a href="dashboard.html" class="nav-item">
+                <span>⌂</span>
+                <div>
+                    <p>Dashboard</p>
+                    <small>Overview</small>
+                </div>
+            </a>
+
+            <a href="performance.html" class="nav-item">
+                <span>◇</span>
+                <div>
+                    <p>Performance</p>
+                    <small>Academic insights</small>
+                </div>
+            </a>
+
+            <a href="predictions.html" class="nav-item">
+                <span>◎</span>
+                <div>
+                    <p>Predictions</p>
+                    <small>Performance prediction</small>
+                </div>
+            </a>
+
+            <a href="learning.html" class="nav-item">
+                <span>✦</span>
+                <div>
+                    <p>Learning</p>
+                    <small>Personalized plan</small>
+                </div>
+            </a>
+
+            <a href="reports.html" class="nav-item active">
+                <span>▣</span>
+                <div>
+                    <p>Reports</p>
+                    <small>Academic reports</small>
+                </div>
+            </a>
+
+        </nav>
+
+        <!-- BOTTOM SECTION -->
+        <div class="sidebar-bottom">
+
+            <a href="settings.html" class="nav-item">
+                <span>⚙</span>
+                <div>
+                    <p>Settings</p>
+                    <small>Preferences</small>
+                </div>
+            </a>
+
+            <div class="sidebar-status">
+                <span class="online-dot"></span>
+                <div>
+                    <strong>Report System</strong>
+                    <small>Academic profile connected</small>
+                </div>
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+        <header class="topbar">
+
+            <div>
+                <span class="page-label">ACADEMIC ANALYTICS</span>
+                <h1>Academic Reports</h1>
+                <p>Your personalized academic progress and performance reports.</p>
+            </div>
+
+            <div class="profile">
+                <div class="profile-avatar" id="profileAvatar">S</div>
+
+                <div>
+                    <strong id="studentName">Student</strong>
+                    <span>AI Learner</span>
+                </div>
+            </div>
+
+        </header>
+
+
+        <!-- REPORT BANNER -->
+        <section class="report-banner">
+
+            <div class="banner-icon">📊</div>
+
+            <div>
+                <span>STUDENT PERFORMANCE REPORT</span>
+                <h2>Your Academic Overview</h2>
+                <p>
+                    Review your saved academic information, subject progress
+                    and learning goals.
+                </p>
+            </div>
+
+        </section>
+
+
+        <!-- STATISTICS -->
+        <section class="stats-grid">
+
+            <div class="stat-card">
+                <div class="stat-icon purple">📚</div>
+                <span>Selected Subjects</span>
+                <h2 id="totalSubjects">—</h2>
+                <small>From Academic Setup</small>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon blue">🎯</div>
+                <span>Average Completion</span>
+                <h2 id="averageCompletion">—</h2>
+                <small>Based on selected subjects</small>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon green">📅</div>
+                <span>Attendance</span>
+                <h2 id="attendanceValue">—</h2>
+                <small>Saved attendance information</small>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon orange">⏱️</div>
+                <span>Study Hours</span>
+                <h2 id="studyHours">—</h2>
+                <small>Saved study hours</small>
+            </div>
+
+        </section>
+
+
+        <!-- SUBJECT AND PROFILE REPORT -->
+        <section class="report-grid">
+
+            <!-- SUBJECT PERFORMANCE -->
+            <div class="report-card subject-card">
+
+                <div class="card-heading">
+                    <div>
+                        <span class="section-label">SUBJECT ANALYSIS</span>
+                        <h2>Subject-wise Performance</h2>
+                        <p>Your selected subjects and their completion.</p>
+                    </div>
+                </div>
+
+                <div id="subjectReport" class="subject-report">
+                    <p class="empty-message">
+                        Loading subject information...
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- ACADEMIC OVERVIEW -->
+            <div class="report-card overview-card">
+
+                <div class="card-heading">
+                    <div>
+                        <span class="section-label">STUDENT PROFILE</span>
+                        <h2>Academic Overview</h2>
+                        <p>Your saved academic information.</p>
+                    </div>
+                </div>
+
+                <div id="academicOverview" class="overview-list">
+                    <p class="empty-message">Loading profile...</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- LEARNING AND GOALS -->
+        <section class="report-grid lower-grid">
+
+            <!-- LEARNING PROGRESS -->
+            <div class="report-card">
+
+                <div class="card-heading">
+                    <div>
+                        <span class="section-label">LEARNING ANALYSIS</span>
+                        <h2>Learning Progress</h2>
+                        <p>Based on your selected subjects.</p>
+                    </div>
+                </div>
+
+                <div id="learningReport"></div>
+
+            </div>
+
+
+            <!-- ACADEMIC GOALS -->
+            <div class="report-card">
+
+                <div class="card-heading">
+                    <div>
+                        <span class="section-label">ACADEMIC GOALS</span>
+                        <h2>Your Goals</h2>
+                        <p>Goals saved in Academic Setup.</p>
+                    </div>
+                </div>
+
+                <div id="goalsReport"></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- STUDY CONSISTENCY -->
+        <section class="report-card consistency-card">
+
+            <div class="card-heading">
+                <div>
+                    <span class="section-label">STUDY HABITS</span>
+                    <h2>Study Consistency</h2>
+                    <p>Your saved study consistency information.</p>
+                </div>
+            </div>
+
+            <div id="consistencyReport"></div>
+
+        </section>
+
+
+        <!-- DOWNLOAD REPORT -->
+        <div class="report-actions">
+
+            <button id="downloadReport" class="download-btn">
+                ⬇ Download Academic Report
+            </button>
+
+        </div>
+
+
+        <!-- FOOTER -->
+        <footer>
+            EduPredict AI · Personalized Academic Reporting
+        </footer>
+
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="../js/data.js"></script>
+    <script src="../js/reports.js"></script>
+
+</body>
+</html>

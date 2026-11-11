@@ -1,0 +1,275 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Predictions | EduPredict AI</title>
+    <link rel="stylesheet" href="../css/predictions.css">
+</head>
+
+<body>
+
+    <aside class="sidebar">
+
+        <div class="brand">
+            <div class="brand-icon">🎓</div>
+            <div class="brand-text">
+                <h2>EduPredict AI</h2>
+                <span>STUDENT INTELLIGENCE</span>
+            </div>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="dashboard.html" class="nav-item">
+                <span>⌂</span>
+                <div><p>Dashboard</p><small>Overview</small></div>
+            </a>
+
+            <a href="performance.html" class="nav-item">
+                <span>◇</span>
+                <div><p>Performance</p><small>Academic insights</small></div>
+            </a>
+
+            <a href="predictions.html" class="nav-item active">
+                <span>◎</span>
+                <div><p>Predictions</p><small>Performance prediction</small></div>
+            </a>
+
+            <a href="learning.html" class="nav-item">
+                <span>✦</span>
+                <div><p>Learning</p><small>Personalized plan</small></div>
+            </a>
+
+            <a href="reports.html" class="nav-item">
+                <span>▣</span>
+                <div><p>Reports</p><small>Progress reports</small></div>
+            </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <a href="settings.html" class="nav-item">
+                <span>⚙</span>
+                <div><p>Settings</p><small>Preferences</small></div>
+            </a>
+
+            <a href="dashboard.html" class="nav-item">
+                <span>↪</span>
+                <div><p>Logout</p></div>
+            </a>
+        </div>
+
+        <div class="sidebar-status">
+            <span class="online-dot"></span>
+            <div>
+                <strong>AI System</strong>
+                <small>Ready to analyze</small>
+            </div>
+        </div>
+
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <span class="page-label">ACADEMIC INTELLIGENCE</span>
+                <h1>AI Performance Prediction</h1>
+                <p>Use your academic data to predict future performance.</p>
+            </div>
+
+            <div class="profile">
+                <div class="profile-avatar" id="profileAvatar">S</div>
+                <div>
+                    <strong id="studentName">Student</strong>
+                    <span>AI Learner</span>
+                </div>
+            </div>
+        </header>
+
+        <section class="prediction-intro">
+            <div class="intro-icon">✦</div>
+            <div>
+                <span class="intro-label">SMART ACADEMIC ANALYSIS</span>
+                <h2>Predict Your Academic Performance</h2>
+                <p>
+                    Enter your current academic information to estimate
+                    your expected performance, identify risk levels,
+                    and understand important academic factors.
+                </p>
+            </div>
+        </section>
+
+        <section class="prediction-grid">
+
+            <div class="card input-card">
+                <div class="card-header">
+                    <div>
+                        <span class="section-label">STUDENT INFORMATION</span>
+                        <h2>Student Academic Data</h2>
+                        <p>Enter your latest academic information.</p>
+                    </div>
+                    <div class="ai-badge">✦ AI MODEL</div>
+                </div>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label for="attendance">Attendance <span>%</span></label>
+                        <input type="number" id="attendance" min="0" max="100"
+                            value="86" placeholder="Enter attendance">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="previousMarks">Previous Marks <span>%</span></label>
+                        <input type="number" id="previousMarks" min="0" max="100"
+                            value="78" placeholder="Enter previous marks">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="studyHours">Study Hours <span>hrs/day</span></label>
+                        <input type="number" id="studyHours" min="0" max="24"
+                            step="0.5" value="3" placeholder="Daily study hours">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="assignmentScore">Assignment Score <span>%</span></label>
+                        <input type="number" id="assignmentScore" min="0" max="100"
+                            value="74" placeholder="Assignment score">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="studyConsistency">Study Consistency <span>%</span></label>
+                        <input type="number" id="studyConsistency" min="0" max="100"
+                            value="82" placeholder="Study consistency">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="internalMarks">Internal Marks <span>%</span></label>
+                        <input type="number" id="internalMarks" min="0" max="100"
+                            value="76" placeholder="Internal marks">
+                    </div>
+
+                </div>
+
+                <button class="predict-btn" id="predictBtn">
+                    <span>✦</span> Predict My Performance
+                    <span class="button-arrow">→</span>
+                </button>
+            </div>
+
+            <div class="card result-card">
+
+                <div class="card-header">
+                    <div>
+                        <span class="section-label">AI ANALYSIS</span>
+                        <h2>Prediction Result</h2>
+                        <p>Your academic performance forecast.</p>
+                    </div>
+                    <div class="status-dot">●</div>
+                </div>
+
+                <div class="prediction-score">
+                    <div class="score-circle" id="scoreCircle">
+                        <div>
+                            <strong id="predictedScore">84</strong>
+                            <span>%</span>
+                        </div>
+                    </div>
+
+                    <h3>Expected Performance</h3>
+                    <p id="predictionMessage">
+                        Your current academic pattern indicates
+                        positive performance potential.
+                    </p>
+                </div>
+
+                <div class="prediction-stats">
+                    <div class="result-stat">
+                        <span>Risk Level</span>
+                        <strong class="low-risk" id="riskLevel">Low</strong>
+                    </div>
+
+                    <div class="result-stat">
+                        <span>Model Confidence</span>
+                        <strong id="confidence">91%</strong>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="card factors-card">
+            <div class="card-header">
+                <div>
+                    <span class="section-label">ACADEMIC OVERVIEW</span>
+                    <h2>Prediction Factors</h2>
+                    <p>Key academic factors influencing the prediction.</p>
+                </div>
+            </div>
+
+            <div class="factor-grid">
+
+                <div class="factor">
+                    <div class="factor-top">
+                        <span>Attendance</span>
+                        <strong id="attendanceValue">86%</strong>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-fill" id="attendanceBar" style="width:86%"></div>
+                    </div>
+                </div>
+
+                <div class="factor">
+                    <div class="factor-top">
+                        <span>Previous Marks</span>
+                        <strong id="marksValue">78%</strong>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-fill" id="marksBar" style="width:78%"></div>
+                    </div>
+                </div>
+
+                <div class="factor">
+                    <div class="factor-top">
+                        <span>Study Consistency</span>
+                        <strong id="consistencyValue">82%</strong>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-fill" id="consistencyBar" style="width:82%"></div>
+                    </div>
+                </div>
+
+                <div class="factor">
+                    <div class="factor-top">
+                        <span>Assignment Score</span>
+                        <strong id="assignmentValue">74%</strong>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-fill" id="assignmentBar" style="width:74%"></div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="ai-insight">
+            <div class="insight-icon">✦</div>
+            <div>
+                <span class="section-label">PERSONALIZED RECOMMENDATION</span>
+                <h3>AI Insight</h3>
+                <p id="aiInsight">
+                    Your attendance and study consistency are currently
+                    strong. Increasing your daily study time slightly
+                    could help improve your expected score further.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="../js/predictions.js"></script>
+
+</body>
+</html>

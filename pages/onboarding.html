@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>EduPredict AI - Setup</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/onboarding.css"
+    >
+</head>
+
+
+<body>
+
+<div class="onboarding-page">
+
+
+    <!-- =================================================
+         BACKGROUND DECORATION
+    ================================================== -->
+
+    <div class="glow glow-one"></div>
+    <div class="glow glow-two"></div>
+
+    <div class="network">
+
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+
+    </div>
+
+
+    <!-- =================================================
+         HEADER
+    ================================================== -->
+
+    <header class="topbar">
+
+        <a
+            href="../index.html"
+            class="brand"
+        >
+
+            <div class="brand-icon">
+                🎓
+            </div>
+
+            <div class="brand-text">
+                EduPredict <span>AI</span>
+            </div>
+
+        </a>
+
+
+        <div class="step-status">
+
+            <div id="stepText">
+                Step 01 of 04
+            </div>
+
+            <div class="progress-line">
+
+                <div id="progressBar"></div>
+
+            </div>
+
+        </div>
+
+
+        <a
+            href="../index.html"
+            class="back-button"
+        >
+            ← Back
+        </a>
+
+    </header>
+
+
+
+    <!-- =================================================
+         SLIDER
+    ================================================== -->
+
+    <main class="slider-wrapper">
+
+        <div
+            class="slides"
+            id="slides"
+        >
+
+
+            <!-- =================================================
+                 SLIDE 1
+            ================================================== -->
+
+            <section class="slide">
+
+
+                <!-- LEFT -->
+
+                <div class="slide-content">
+
+                    <div class="ai-badge">
+
+                        <span class="pulse"></span>
+
+                        AI PERSONALIZATION
+
+                    </div>
+
+
+                    <h1>
+
+                        Let's build your
+
+                        <span>
+                            learning profile.
+                        </span>
+
+                    </h1>
+
+
+                    <p>
+
+                        EduPredict AI learns about your academic
+                        journey and creates personalized insights
+                        to help you make smarter decisions.
+
+                    </p>
+
+
+                    <div class="ai-features">
+
+                        <div>
+                            <span>✦</span>
+                            Personalized Insights
+                        </div>
+
+                        <div>
+                            <span>◉</span>
+                            Smart Predictions
+                        </div>
+
+                        <div>
+                            <span>↗</span>
+                            Career Guidance
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- RIGHT AI VISUAL -->
+
+                <div class="visual">
+
+                    <div class="ai-orb">
+
+                        <div class="orb-ring"></div>
+
+                        <div class="orb-ring ring-two"></div>
+
+                        <div class="orb-ring ring-three"></div>
+
+
+                        <div class="orb-core">
+                            ✦
+                        </div>
+
+                    </div>
+
+
+                    <div class="floating-card card-top">
+
+                        <span>•</span>
+
+                        AI Profile
+
+                        <b>Ready</b>
+
+                    </div>
+
+
+                    <div class="floating-card card-bottom">
+
+                        ✦
+
+                        Personalized Learning
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- BUTTON -->
+
+                <button
+                    type="button"
+                    class="primary-btn next-btn"
+                >
+
+                    <span>
+                        Get Started
+                    </span>
+
+                    <strong>
+                        →
+                    </strong>
+
+                </button>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 SLIDE 2
+            ================================================== -->
+
+            <section class="slide">
+
+
+                <!-- LEFT -->
+
+                <div class="slide-content">
+
+                    <div class="step-label">
+                        STEP 02
+                    </div>
+
+
+                    <h1>
+
+                        Tell us about your
+
+                        <span>
+                            academic journey.
+                        </span>
+
+                    </h1>
+
+
+                    <p>
+
+                        A few details help EduPredict AI
+                        understand your current academic stage
+                        and provide more relevant recommendations.
+
+                    </p>
+
+
+                    <div class="form-grid">
+
+
+                        <!-- NAME -->
+
+                        <div class="field">
+
+                            <label>
+                                👤 Your Name
+                            </label>
+
+                            <div class="input-wrapper">
+
+                                <span class="input-icon">
+                                    👤
+                                </span>
+
+                                <input
+                                    type="text"
+                                    id="studentName"
+                                    placeholder="Enter your full name"
+                                >
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- EDUCATION -->
+
+                        <div class="field">
+
+                            <label>
+                                🎓 Education Level
+                            </label>
+
+                            <div class="input-wrapper">
+
+                                <span class="input-icon">
+                                    🎓
+                                </span>
+
+                                <select id="education">
+
+                                    <option value="">
+                                        Select education level
+                                    </option>
+
+                                    <option value="school">
+                                        School
+                                    </option>
+
+                                    <option value="undergraduate">
+                                        Undergraduate
+                                    </option>
+
+                                    <option value="postgraduate">
+                                        Postgraduate
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- AREA -->
+
+                        <div class="field">
+
+                            <label>
+                                📚 Area of Study
+                            </label>
+
+                            <div class="input-wrapper">
+
+                                <span class="input-icon">
+                                    📚
+                                </span>
+
+                                <select id="studyArea">
+
+                                    <option value="">
+                                        Select your field
+                                    </option>
+
+                                    <option value="computer-science">
+                                        Computer Science
+                                    </option>
+
+                                    <option value="ai-ml">
+                                        AI & ML
+                                    </option>
+
+                                    <option value="data-science">
+                                        Data Science
+                                    </option>
+
+                                    <option value="electronics">
+                                        Electronics
+                                    </option>
+
+                                    <option value="mechanical">
+                                        Mechanical
+                                    </option>
+
+                                    <option value="other">
+                                        Other
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- YEAR -->
+
+                        <div class="field">
+
+                            <label>
+                                📅 Current Year
+                            </label>
+
+                            <div class="input-wrapper">
+
+                                <span class="input-icon">
+                                    📅
+                                </span>
+
+                                <select id="year">
+
+                                    <option value="">
+                                        Select current year
+                                    </option>
+
+                                    <option value="1">
+                                        First Year
+                                    </option>
+
+                                    <option value="2">
+                                        Second Year
+                                    </option>
+
+                                    <option value="3">
+                                        Third Year
+                                    </option>
+
+                                    <option value="4">
+                                        Fourth Year
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="security-note">
+
+                        🔒
+
+                        Your information is secure and used
+                        only to personalize your experience.
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- RIGHT -->
+
+                <div class="visual academic-visual">
+
+                    <div class="data-card">
+
+                        <div class="data-title">
+
+                            ✦ AI Profile Analysis
+
+                        </div>
+
+
+                        <div class="data-row">
+
+                            <span>
+                                Academic Growth
+                            </span>
+
+                            <b>
+                                82%
+                            </b>
+
+                        </div>
+
+                        <div class="data-bar">
+                            <span></span>
+                        </div>
+
+
+
+                        <div class="data-row">
+
+                            <span>
+                                Learning Consistency
+                            </span>
+
+                            <b>
+                                76%
+                            </b>
+
+                        </div>
+
+                        <div class="data-bar purple">
+                            <span></span>
+                        </div>
+
+
+
+                        <div class="data-row">
+
+                            <span>
+                                Goal Clarity
+                            </span>
+
+                            <b>
+                                91%
+                            </b>
+
+                        </div>
+
+                        <div class="data-bar pink">
+                            <span></span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- BUTTON -->
+
+                <button
+                    type="button"
+                    class="primary-btn next-btn"
+                >
+
+                    <span>
+                        Continue
+                    </span>
+
+                    <strong>
+                        →
+                    </strong>
+
+                </button>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 SLIDE 3
+            ================================================== -->
+
+            <section class="slide">
+
+
+                <!-- LEFT -->
+
+                <div class="slide-content">
+
+                    <div class="step-label">
+                        STEP 03
+                    </div>
+
+
+                    <h1>
+
+                        What do you want to
+
+                        <span>
+                            achieve?
+                        </span>
+
+                    </h1>
+
+
+                    <p>
+
+                        Choose the goal that matters most to you.
+                        EduPredict AI will use it to personalize
+                        your learning recommendations.
+
+                    </p>
+
+
+                    <div class="goal-grid">
+
+
+                        <button
+                            type="button"
+                            class="goal-card"
+                            data-goal="grades"
+                        >
+
+                            <div class="goal-icon">
+                                📈
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Improve Grades
+                                </strong>
+
+                                <small>
+                                    Improve academic performance
+                                </small>
+
+                            </div>
+
+                        </button>
+
+
+
+                        <button
+                            type="button"
+                            class="goal-card"
+                            data-goal="career"
+                        >
+
+                            <div class="goal-icon">
+                                🚀
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Career Growth
+                                </strong>
+
+                                <small>
+                                    Build skills for your career
+                                </small>
+
+                            </div>
+
+                        </button>
+
+
+
+                        <button
+                            type="button"
+                            class="goal-card"
+                            data-goal="learning"
+                        >
+
+                            <div class="goal-icon">
+                                🧠
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Learn Better
+                                </strong>
+
+                                <small>
+                                    Improve your learning strategy
+                                </small>
+
+                            </div>
+
+                        </button>
+
+
+
+                        <button
+                            type="button"
+                            class="goal-card"
+                            data-goal="consistency"
+                        >
+
+                            <div class="goal-icon">
+                                🎯
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Stay Consistent
+                                </strong>
+
+                                <small>
+                                    Build better study habits
+                                </small>
+
+                            </div>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- RIGHT -->
+
+                <div class="visual">
+
+                    <div class="target-orb">
+
+                        <div class="target-ring">
+                            🎯
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- BUTTON -->
+
+                <button
+                    type="button"
+                    class="primary-btn next-btn"
+                >
+
+                    <span>
+                        Continue
+                    </span>
+
+                    <strong>
+                        →
+                    </strong>
+
+                </button>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 SLIDE 4
+            ================================================== -->
+
+            <section class="slide final-slide">
+
+
+                <!-- LEFT -->
+
+                <div class="slide-content">
+
+                    <div class="success-icon">
+                        ✓
+                    </div>
+
+
+                    <div class="step-label">
+                        PROFILE READY
+                    </div>
+
+
+                    <h1>
+
+                        Your AI learning
+
+                        <span>
+                            profile is ready.
+                        </span>
+
+                    </h1>
+
+
+                    <p>
+
+                        EduPredict AI has everything it needs
+                        to personalize your academic journey.
+
+                    </p>
+
+
+                    <div class="ready-list">
+
+                        <div>
+
+                            <span>✓</span>
+
+                            Personalized learning insights
+
+                        </div>
+
+                        <div>
+
+                            <span>✓</span>
+
+                            Performance predictions
+
+                        </div>
+
+                        <div>
+
+                            <span>✓</span>
+
+                            Smart academic recommendations
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- RIGHT -->
+
+                <div class="visual">
+
+                    <div class="ready-orb">
+
+                        <div class="ready-ring"></div>
+
+                        <div class="ready-ring second"></div>
+
+                        <div class="ready-core">
+                            ✦
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- FINISH -->
+
+                <button
+                    type="button"
+                    class="primary-btn"
+                    id="finishBtn"
+                >
+
+                    <span>
+                        Enter Dashboard
+                    </span>
+
+                    <strong>
+                        →
+                    </strong>
+
+                </button>
+
+            </section>
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =================================================
+         BOTTOM NAVIGATION
+    ================================================== -->
+
+    <div class="bottom-navigation">
+
+        <button
+            type="button"
+            id="previousBtn"
+            class="previous-btn"
+        >
+            ← Previous
+        </button>
+
+
+        <div class="dots">
+
+            <span
+                class="dot active"
+                data-slide="0"
+            ></span>
+
+            <span
+                class="dot"
+                data-slide="1"
+            ></span>
+
+            <span
+                class="dot"
+                data-slide="2"
+            ></span>
+
+            <span
+                class="dot"
+                data-slide="3"
+            ></span>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =================================================
+         FOOTER
+    ================================================== -->
+
+    <footer>
+
+        <span>
+            EduPredict AI
+        </span>
+
+        <b>•</b>
+
+        <span>
+            Personalized learning intelligence
+        </span>
+
+    </footer>
+
+
+
+    <script src="../js/onboarding.js"></script>
+
+</div>
+
+</body>
+
+</html>
